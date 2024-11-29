@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F7 Motors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="https://t4.ftcdn.net/jpg/04/68/54/65/360_F_468546574_sxSut6uezeGyVZJLULxopbFY31NV4LUr.webp">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">F7 Motors</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#carros">Carros</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="carros" class="carros">
+        <div class="container">
+            <h2>Nossos Carros</h2>
+            <div class="carros-lista">
+                <div class="carro">
+                    <img src="https://blog.carrera.com.br/wp-content/uploads/2023/11/Jetta-GLI-2024-1-1280x640.jpg" alt="Carro 1">
+                    <h3>VOLKSWAGEN JETTA GLI 2024</h3>
+                    <p>Preço: R$ 224.800</p>
+                </div>
+                <button class="btn-ficha" onclick="abrirFicha('ficha1')">Ver Ficha Técnica</button>
+            </div>
+            
+            <!-- Modal para a ficha técnica -->
+            <div id="ficha1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharFicha('ficha1')">&times;</span>
+                    <h3>Ficha Técnica - VOLKSWAGEN JETTA GLI 2024</h3>
+                    <ul>
+                        <li>Motor: 2.0 Turbo</li>
+                        <li>Potência: 231 cv</li>
+                        <li>Consumo: 9,9 km/l (cidade) / 12,2 km/l (estrada)</li>
+                        <li>Transmissão: Automática</li>
+                        <li>Portas: 4</li>
+                    </ul>
+                </div>
+            </div>
+                <div class="carro">
+                    <img src="https://www.agoramotors.com.br/wp-content/uploads/2024/05/Honda-Civic-Type-R-1024x576.jpg" alt="Carro 2">
+                    <h3>HONDA CIVIC 2.0 TYPE R 2024</h3>
+                    <p>Preço: R$ 429.900</p>
+                </div>
+                <button class="btn-ficha" onclick="abrirFicha('ficha1')">Ver Ficha Técnica</button>
+            </div>
+            
+            <!-- Modal para a ficha técnica -->
+            <div id="ficha1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharFicha('ficha1')">&times;</span>
+                    <h3>Ficha Técnica - HONDA CIVIC 2.0 TYPE R 2024</h3>
+                    <ul>
+                        <li>Motor: 2.0 VTEC Turbo</li>
+                        <li>Potência: 297 cv</li>
+                        <li>Consumo: 8,8 km/l (cidade) / 11,1 km/l (estrada)</li>
+                        <li>Transmissão: Automática</li>
+                        <li>Portas: 4</li>
+                    </ul>
+                </div>
+            </div>
+                <div class="carro">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDgOjosHGrLnOC0asq7F4GaKR-dg6zDBsaA&s" alt="Carro 3">
+                    <h3>PORSCHE MACAN V6 2023</h3>
+                    <p>Preço: R$ 819.000</p>
+                </div>
+                <button class="btn-ficha" onclick="abrirFicha('ficha1')">Ver Ficha Técnica</button>
+            </div>
+            
+            <!-- Modal para a ficha técnica -->
+            <div id="ficha1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharFicha('ficha1')">&times;</span>
+                    <h3>Ficha Técnica - PORSCHE MACAN V6 2023</h3>
+                    <ul>
+                        <li>Motor: V6 Turbo</li>
+                        <li>Potência: 400 cv</li>
+                        <li>Consumo: 6,8 km/l (cidade) / 8,4 km/l (estrada)</li>
+                        <li>Transmissão: Automática</li>
+                        <li>Portas: 4</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function abrirFicha(id) {
+            const modal = document.getElementById(id);
+            modal.style.display = 'flex';
+        }
+    
+        function fecharFicha(id) {
+            const modal = document.getElementById(id);
+            modal.style.display = 'none';
+        }
+    
+        // Fecha o modal ao clicar fora dele
+        window.onclick = function(event) {
+            const modais = document.querySelectorAll('.modal');
+            modais.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        };
+    </script>
+
+<div class="abas">
+    <button class="aba" onclick="abrirAba(event, 'carros-venda')">Carros à Venda</button>
+    <button class="aba" onclick="abrirAba(event, 'carros-vendidos')">Carros Vendidos</button>
+</div>
+
+
+<!-- Conteúdo da aba 2 -->
+<div id="carros-vendidos" class="conteudo-aba" style="display: none;">
+    <h2>Carros Vendidos</h2>
+    <div class="carros-lista">
+        <div class="carro">
+            <img src=".data:image/jpeg;base64,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" alt="Carro 4">
+            <h3>AUDI R8 2021</h3>
+            <p>Preço: R$ 1.849.900</p>
+            <p>Status: Vendido</p>
+        </div>
+        <div id="carros-vendidos" class="conteudo-aba" style="display: none;">
+            <h2>Carros Vendidos</h2>
+            <div class="carros-lista">
+                <div class="carro">
+                    <img src="data:image/jpeg;base64,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" alt="Carro 4">
+                    <h3>VOLKSWAGEN NIVUS 2024</h3>
+                    <p>Preço: R$ 153.990</p>
+                    <p>Status: Vendido</p>
+                </div>
+        <!-- Adicione mais carros vendidos aqui -->
+    </div>
+</div>
+
+<script>
+    function abrirAba(event, idAba) {
+        // Esconde todo o conteúdo das abas
+        const conteudos = document.querySelectorAll('.conteudo-aba');
+        conteudos.forEach((conteudo) => conteudo.classList.remove('active'));
+
+        // Remove a classe ativa de todas as abas
+        const abas = document.querySelectorAll('.aba');
+        abas.forEach((aba) => aba.classList.remove('ativa'));
+
+        // Exibe o conteúdo da aba selecionada
+        document.getElementById(idAba).classList.add('active');
+
+        // Marca a aba selecionada como ativa
+        event.currentTarget.classList.add('ativa');
+    }
+
+    // Define a aba inicial
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.aba').click();
+    });
+</script>
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo(a) à F7 Motors!
+                Sua jornada em busca do carro perfeito começa aqui! Na F7 Motors, oferecemos uma seleção incrível de veículos que atendem a todos os estilos e orçamentos. Seja você um amante de carros esportivos, um fã de SUVs robustos ou alguém que busca a eficiência dos elétricos, temos opções para todos os gostos. 
+
+                Nossa missão é proporcionar a melhor experiência de compra, com atendimento personalizado e condições especiais. Explore nosso estoque, descubra ofertas imperdíveis e encontre o carro dos seus sonhos. Venha nos visitar ou navegue pelo nosso site e prepare-se para acelerar rumo à sua nova aventura!</p>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="selfcare-tips">
+        <h1>F7 Motors</h1>
+        <p>Descubra o carro dos seus sonhos na F7 Motors – onde qualidade e preço justo se encontram para acelerar sua felicidade!</p>
+      </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Loja de Carros. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
